@@ -5,15 +5,39 @@ header {
   padding: 0 200px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
 }
-
+h1 {
+  width: 120px;
+}
+h1 a {
+  width: 100%;
+  display: block;
+}
+h1 a img {
+  width: 100%;
+  object-fit: contain;
+}
 .menu {
   width: 647px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 .utill ul {
   display: flex;
+  width: 150px;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+}
+.utill ul li {
+  cursor: pointer;
 }
