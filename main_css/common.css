@@ -1,0 +1,19 @@
+header {
+  max-width: 1920px;
+  width: 100%;
+  height: 80px;
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 647px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.utill ul {
+  display: flex;
+}
