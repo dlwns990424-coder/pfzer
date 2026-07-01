@@ -12,40 +12,45 @@
 }
 
 /* 첫 번째 비주얼 */
-.hero_section {
-  height: 100vh;
+/* 첫 번째 비주얼 고정 영역 */
+.hero_pin,
+.about_pin {
+  height: 200vh;
+  position: relative;
+}
 
+/* 실제 화면에 고정되는 비주얼 */
+.hero_section,
+.about_hero_2 {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 첫 번째 비주얼 이미지 */
+.hero_section {
   background:
     linear-gradient(rgba(24, 72, 118, 0.38), rgba(24, 72, 118, 0.38)),
     url("../img/about_visual.jpg") center / cover no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.hero_section h3 {
-  color: #f0f0f0;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* 두 번째 비주얼 */
+/* 두 번째 비주얼 이미지 */
 .about_hero_2 {
-  height: 100vh;
   background:
     linear-gradient(rgba(0, 20, 50, 0.45), rgba(0, 20, 50, 0.45)),
     url("../img/a.jpg") center / cover no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* 비주얼 텍스트 */
+.hero_section h3,
 .about_hero_2 h3 {
   color: #f0f0f0;
   text-align: center;
-  line-height: 1.5;
+  line-height: 90px;
 }
 
 /* 핵심가치 */
@@ -60,10 +65,9 @@
 }
 
 .sec_title_4 {
-  font-size: 34px;
   font-weight: 800;
   color: #111;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .value_desc {
@@ -105,7 +109,12 @@
 
 .con_2 p {
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin-top: 20px;
+}
+.con_2 img {
+  width: 345px;
+  height: 90px;
+  object-fit: cover;
 }
