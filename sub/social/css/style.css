@@ -1,0 +1,118 @@
+/* title */
+.contentshead {
+  margin-top: 80px;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentshead h2 {
+  color: #111;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+/* Hero section */
+.hero_section {
+  height: 100vh;
+
+  background:
+    linear-gradient(rgba(24, 72, 118, 0.38), rgba(24, 72, 118, 0.38)),
+    url("../img/social_visual.jpg") center / cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_section h3 {
+  color: #f0f0f0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* section_2 */
+.section_2 {
+  padding: 100px 0 140px;
+  background-color: #fff;
+}
+
+.section_inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.sec_title_2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 80px;
+}
+
+/* con_wrap_2 */
+.con_wrap_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+/* con_2 */
+.con_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 텍스트 영역 */
+.Frame57 {
+  width: 600px;
+}
+
+.Frame57 h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.Frame57 p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* 이미지 영역 */
+.con_img {
+  width: 420px;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.con_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 두 번째 줄도 같은 방향이면 이거 없어도 됨 */
+/* 만약 두 번째 줄 이미지/텍스트 반대로 하고 싶으면 사용 */
+.con_2:nth-child(2) {
+  flex-direction: row;
+}
+
+/* hover */
+.con_2:hover .con_img {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.con_2:hover h3 {
+  color: #0000c9;
+}
+
+.con_img,
+.Frame57 h3 {
+  transition: 0.3s;
+}

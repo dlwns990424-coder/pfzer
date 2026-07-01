@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <title>260630</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .wrap {
+        width: 600px;
+        margin: 50px auto;
+        background-color: aliceblue;
+      }
+      header {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      .info {
+        width: 200px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .img {
+        width: 25px;
+        height: 25px;
+        background-color: gray;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 5px;
+      }
+      .menu_icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      .menu_wrap {
+        width: 200px;
+        height: 250px;
+        padding: 30px;
+        background-color: white;
+
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        z-index: 10;
+        display: none;
+      }
+      .m_active {
+        display: flex;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="info">
+          <div class="img"></div>
+          <div class="name"></div>
+        </div>
+        <div class="menu_icon">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <ul class="menu_wrap">
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">menu</a></li>
+        </ul>
+      </header>
+      <div class="slide">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="img/cat1.jpg" alt="고양이1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/cat2.jpg" alt="고양이2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/cat3.jpg" alt="고양이3" />
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!--  <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+ -->
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+
+      <div class="heart_box">
+        <div class="heart">
+          <i class="fa-regular fa-heart"></i>
+          <p>좋아요 <span>0</span>개</p>
+        </div>
+      </div>
+      <form>
+        <input type="text" />
+        <button>등록</button>
+      </form>
+      <div class="review_wrap">
+        <h3 class="review"></h3>
+      </div>
+    </div>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        /* direction: 'vertical', */
+        loop: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+
+      const imgEl = document.querySelector(".img");
+      const nameEl = document.querySelector(".name");
+
+      const data = [
+        {
+          img: "img/cat4.jpg",
+          id: 1111111,
+        },
+        {
+          img: "img/cat5.jpg",
+          id: "삼미정",
+        },
+      ];
+      imgEl.innerText = data.img;
+      nameEl.innerText = data.id;
+
+      const iconEl = document.querySelector(".menu_icon");
+      const wrapEl = document.querySelector(".menu_wrap");
+
+      const clickIcon = () => {
+        wrapEl.classList.toggle("m_active");
+      };
+
+      iconEl.addEventListener("click", clickIcon);
+
+      const formEl = document.querySelector("form");
+      const inputEl = document.querySelector("input");
+      const rewrapEl = document.querySelector(".review_wrap");
+
+      const showreview = () => {
+        const getreview = localStorage.getItem("review");
+
+        rewrapEl.innerHTML = `<h3>${getreview}</h3>`;
+      };
+      showreview();
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const inputValue = inputEl.value;
+        localStorage.setItem("review", inputValue);
+
+        showreview();
+      };
+      formEl.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>

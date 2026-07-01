@@ -1,10 +1,12 @@
-const fadeScaleSwiper = (name) => {
+const fadeScaleSwiper = (name, options = {}) => {
   return new Swiper(name, {
     slidesPerView: "auto",
     spaceBetween: 24,
     grabCursor: true,
     speed: 700,
     watchSlidesProgress: true,
+
+    ...options,
 
     on: {
       progress(swiper) {
@@ -34,4 +36,17 @@ const fadeScaleSwiper = (name) => {
 };
 
 const researchSwiper = fadeScaleSwiper(".researchSwiper");
-const productSwiper = fadeScaleSwiper(".productSwiper");
+
+const productSwiper = fadeScaleSwiper(".productSwiper", {
+  slidesOffsetBefore: 200,
+  slidesOffsetAfter: 200,
+});
+
+const newsSwiper = new Swiper(".newsSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  slidesOffsetBefore: 200,
+  slidesOffsetAfter: 200,
+  grabCursor: true,
+  speed: 700,
+});
