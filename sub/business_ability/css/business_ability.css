@@ -16,21 +16,12 @@
   align-items: center;
 }
 
-/* 비주얼 고정 영역 */
-.hero_pin {
-  height: 200vh;
-  position: relative;
-}
-
-/* 실제 화면에 고정되는 비주얼 */
 .hero_section {
   height: 100vh;
-  position: sticky;
+  position: relative;
   top: 0;
-
   background: url("../hero_section_img/Hero section.png") center / cover
     no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;

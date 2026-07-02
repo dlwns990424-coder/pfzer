@@ -12,18 +12,11 @@
 }
 
 /* 첫 번째 비주얼 */
-/* 첫 번째 비주얼 고정 영역 */
-.hero_pin,
-.about_pin {
-  height: 200vh;
-  position: relative;
-}
 
-/* 실제 화면에 고정되는 비주얼 */
 .hero_section,
 .about_hero_2 {
   height: 100vh;
-  position: sticky;
+  position: relative;
   top: 0;
 
   display: flex;

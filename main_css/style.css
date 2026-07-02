@@ -15,12 +15,8 @@
   object-fit: cover;
 }
 /* hero_section */
-.hero_pin {
-  height: 200vh;
-  position: relative;
-}
 .hero_section {
-  position: sticky;
+  position: relative;
   top: 0;
 }
 .full_section .fullsection_title {
@@ -164,7 +160,7 @@
 
 /* section_4  */
 .section_4 {
-  position: sticky;
+  position: relative;
   top: 0;
   color: #fff;
   height: 100vh;
