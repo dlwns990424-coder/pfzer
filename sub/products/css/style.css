@@ -34,7 +34,7 @@
 .hero_section h3 {
   color: #f0f0f0;
   text-align: center;
-  line-height: 1.5;
+  line-height: 90px;
 }
 
 /* section_2 */
@@ -50,7 +50,7 @@
 
 .sec_title_2 {
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 700;
   color: #111;
   margin-bottom: 55px;
 }
@@ -71,7 +71,10 @@
 .con_2:hover {
   transform: translateY(-5px);
 }
-
+.con_2 h4 {
+  font-weight: 500;
+  font-size: 28px;
+}
 .con_2:hover h4 {
   color: #0000c9;
 }

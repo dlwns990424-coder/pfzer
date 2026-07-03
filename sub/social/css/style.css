@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.contentshead h2 {
+.contentshead h3 {
   color: #111;
   font-size: 42px;
   font-weight: 800;
@@ -32,7 +32,7 @@
 .hero_section h3 {
   color: #f0f0f0;
   text-align: center;
-  line-height: 1.5;
+  line-height: 90px;
 }
 
 /* section_2 */
